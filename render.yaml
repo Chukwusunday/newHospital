@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: dan-hospital-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DAN_ADMIN_PASSWORD
+        sync: false
+      - key: JAVA_OPTS
+        value: -Xms128m -Xmx384m

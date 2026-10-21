@@ -1,0 +1,11 @@
+.git
+.gitignore
+frontend/node_modules
+frontend/dist
+frontend/.npm-cache
+backend/target
+backend/.m2
+backend/data
+*.log
+.idea
+.vscode

@@ -1,0 +1,20 @@
+/* DAN Hospital sky-blue brand theme */
+aside{background:#075985}
+.brand svg{color:#7dd3fc}
+.brand small{color:#bae6fd}
+nav button{color:#d7f2ff}
+nav button.active,nav button:hover{background:#0284c7}
+.secure{background:#036998;border-color:#38bdf8}
+.secure small{color:#bae6fd}
+.avatar{background:#e0f2fe;color:#0369a1}
+.welcome{background:linear-gradient(115deg,#0284c7,#38bdf8)}
+.welcome p{color:#e0f2fe}
+.stat svg{color:#0284c7;background:#e0f2fe}
+.patient-icon{background:#e0f2fe;color:#0369a1}
+.primary{background:#0284c7!important;border-color:#0284c7!important}
+.primary:hover{background:#0369a1!important;border-color:#0369a1!important}
+.vital-line{color:#0284c7}
+.patient-banner{background:#f0f9ff}
+.patient-banner span,.patient-banner small{color:#075985}
+.toast{background:#075985}
+.staff{display:flex;align-items:center;gap:10px}.staff>div:first-child{text-align:right}.staff strong,.staff small{display:block}.staff small{font-size:10px;color:#64748b}.staff button{border:1px solid #bae6fd;background:#f0f9ff;color:#0369a1;border-radius:8px;padding:8px 10px;cursor:pointer}.login-page{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,#f0f9ff,#e0f2fe)}.login-card{width:min(430px,100%);padding:38px;background:#fff;border:1px solid #bae6fd;border-radius:18px;box-shadow:0 24px 70px #0369a122}.login-logo{display:flex;align-items:center;gap:12px;color:#075985}.login-logo svg{width:44px;height:44px;padding:9px;color:#fff;background:#0284c7;border-radius:11px}.login-logo b{display:block;font-size:25px}.login-logo small{display:block;color:#64748b;text-transform:uppercase;letter-spacing:.08em}.login-card h1{margin:30px 0 5px}.login-card>p{color:#64748b;margin:0 0 25px}.login-button{width:100%;display:block!important;padding:12px!important;margin-top:8px}.form-error{color:#b42318;background:#fef3f2;border-radius:7px;padding:10px;margin-bottom:12px;font-size:13px}.login-help{display:block;text-align:center;color:#94a3b8;margin-top:22px}
