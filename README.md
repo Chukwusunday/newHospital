@@ -1,4 +1,11 @@
 # DAN Hospital Portal
+
+## Database Entity Relationship Diagram
+
+The diagram below shows the relationships between patients, visits, and prescriptions.
+
+![newHospital Entity Relationship Diagram](docs/erd.svg)
+
 visit the link via https://dan-hospital-demo.onrender.com/
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/adejumoisris/DAN-hospital)
