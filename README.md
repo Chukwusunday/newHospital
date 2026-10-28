@@ -35,12 +35,6 @@ A **distributed database** stores and/or replicates data across multiple connect
 
 Distributed designs add complexity around network outages, replication delays, transaction consistency, and conflict handling. Replication is not a substitute for independent backups.
 
-### Current newHospital setup and recommendation
-
-The current project uses a **file-based H2 database** for its demo/local setup. It is **not currently configured as a distributed database**. The backend supports configuring an external database through the `DAN_DB_URL`, `DAN_DB_USERNAME`, and `DAN_DB_PASSWORD` environment variables.
-
-For production, first select a database that meets the hospital's expected workload, availability, security, and recovery requirements. A conventional relational database may be sufficient initially; consider a distributed design only when measured workload, multi-site access, or resilience requirements justify the additional complexity. Plan secure access controls, encryption, audit logging, independent backups, and regular restoration tests.
-
 **Patient-data warning:** the demo uses temporary H2 storage. Do not use it for real patient information. Complete security, privacy, access-control, audit, backup, and regulatory reviews before production use.
 
 ## Run the backend
