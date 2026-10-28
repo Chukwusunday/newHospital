@@ -22,7 +22,7 @@ DAN Hospital Portal replaces paper patient cards with a simple digital workflow:
 - `backend/` — Spring Boot REST API, Spring Data JPA, validation, and H2 database
 - `frontend/` — React + Vite user interface
 
-## Distributed and Cloud Databases
+## Distributed Databases
 
 ### What is a distributed database?
 
@@ -35,34 +35,13 @@ A **distributed database** stores and/or replicates data across multiple connect
 
 Distributed designs add complexity around network outages, replication delays, transaction consistency, and conflict handling. Replication is not a substitute for independent backups.
 
-### What is a cloud database?
+### Current newHospital setup and recommendation
 
-A **cloud database** runs on cloud infrastructure. A managed cloud database may provide provider-managed provisioning, patching, monitoring, backups, scaling, and high-availability features. Exact responsibilities depend on the selected service and configuration.
+The current project uses a **file-based H2 database** for its demo/local setup. It is **not currently configured as a distributed database**. The backend supports configuring an external database through the `DAN_DB_URL`, `DAN_DB_USERNAME`, and `DAN_DB_PASSWORD` environment variables.
 
-**How it could support newHospital**
-- **Less server administration:** reduce the database maintenance handled directly by the hospital IT team.
-- **Scalability:** adjust compute and storage as registrations, visits, and prescriptions increase.
-- **Recovery:** configure encrypted backups and point-in-time recovery if supported by the service.
-- **Secure access:** connect the Spring Boot backend using approved private networking or secure connectivity, TLS, and credentials stored outside source code.
+For production, first select a database that meets the hospital's expected workload, availability, security, and recovery requirements. A conventional relational database may be sufficient initially; consider a distributed design only when measured workload, multi-site access, or resilience requirements justify the additional complexity. Plan secure access controls, encryption, audit logging, independent backups, and regular restoration tests.
 
-Cloud hosting does not automatically guarantee security, regulatory compliance, or uninterrupted service. These require appropriate access controls, encryption, monitoring, recovery testing, and compliance with applicable Nigerian data-protection and healthcare requirements.
-
-### Distributed vs. cloud database
-
-| Area | Distributed database | Cloud database |
-| --- | --- | --- |
-| Meaning | Data is coordinated across multiple database nodes | Database runs on cloud infrastructure |
-| Main focus | Distribution, replication, scale, and resilience | Hosting and managed database operations |
-| Can they overlap? | Yes; a distributed database can run in the cloud | Yes; a cloud database may be a single instance or use a distributed architecture |
-| Trade-offs | More complexity around consistency, networking, and operations | Provider dependency, cost, configuration, and data-location considerations |
-
-### Current newHospital setup and recommended path
-
-The current project uses a **file-based H2 database** for its demo/local setup. It is **not currently configured as a distributed database or a managed cloud database**. The backend supports configuring an external database through the `DAN_DB_URL`, `DAN_DB_USERNAME`, and `DAN_DB_PASSWORD` environment variables.
-
-For production, a practical first step is to migrate from H2 to a managed PostgreSQL database, configure secure connectivity and least-privilege access, enable encrypted backups and monitoring, and regularly test restoration. Start with one well-managed database unless measured workload or availability requirements justify a distributed architecture. If the hospital expands across branches or needs stronger regional resilience, evaluate managed high-availability or distributed options against consistency, latency, cost, data residency, and recovery requirements.
-
-**Patient-data warning:** the demo uses temporary H2 storage on the free Render service. Do not use it for real patient information. Complete security, privacy, access-control, audit, backup, and regulatory reviews before production use.
+**Patient-data warning:** the demo uses temporary H2 storage. Do not use it for real patient information. Complete security, privacy, access-control, audit, backup, and regulatory reviews before production use.
 
 ## Run the backend
 
