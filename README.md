@@ -89,5 +89,3 @@ free Render web service with a health check.
 3. Enter a secure value for `DAN_ADMIN_PASSWORD` when prompted.
 4. Deploy and open the generated `onrender.com` address.
 
-The free service uses temporary H2 storage. Do not enter real patient information; demo records
-can disappear after a restart or redeployment.
