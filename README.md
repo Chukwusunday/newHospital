@@ -35,8 +35,6 @@ A **distributed database** stores and/or replicates data across multiple connect
 
 Distributed designs add complexity around network outages, replication delays, transaction consistency, and conflict handling. Replication is not a substitute for independent backups.
 
-**Patient-data warning:** the demo uses temporary H2 storage. Do not use it for real patient information. Complete security, privacy, access-control, audit, backup, and regulatory reviews before production use.
-
 ## Run the backend
 
 Requirements: Java 8+ and Maven 3.9+.
