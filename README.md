@@ -44,9 +44,6 @@ cd backend
 mvn spring-boot:run
 ```
 
-The API runs at `http://localhost:8080/api`. The H2 console is available at
-`http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:file:./data/mediflow`, user: `sa`, no password).
-
 ## Run the frontend
 
 Requirements: Node.js 18+.
